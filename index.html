@@ -22,15 +22,15 @@
             <ul>
                 <li>
                     <label for="username">Your name</label>
-                    <input id="username" name="user-name" type="text"/>
+                    <input id="username" name="user-name" placeholder="Please input your name" required type="text"/>
                 </li>
                 <li>
                     <label for="useremail">Your email address</label>
-                    <input id="useremail" name="user-email" type="email"/>
+                    <input id="useremail" name="user-email" required type="email"/>
                 </li>
                 <li>
                     <label for="userpassword">Your password</label>
-                    <input id="userpassword" name="user-password" type="password"/>
+                    <input id="userpassword" minlength="8" name="user-password" required type="password"/>
                 </li>
             </ul>
         </section>
@@ -39,15 +39,15 @@
             <ul>
                 <li>
                     <label for="userage">Your age</label>
-                    <input id="userage" name="user-age" step="1" type="number"/>
+                    <input id="userage" min="18" name="user-age" required step="1" type="number"/>
                 </li>
                 <li>
                     <label for="birthdate">Your birthdate</label>
-                    <input id="birthdate" name="user-birthdate" type="date"/>
+                    <input id="birthdate" max="2007-01-01" name="user-birthdate" required type="date"/>
                 </li>
                 <li>
                     <label for="user-gender">Your gender</label>
-                    <select id="user-gender" name="user-gender">
+                    <select id="user-gender" name="user-gender" required>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
@@ -57,7 +57,7 @@
         </section>
         <section>
             <label for="message">Your message</label>
-            <textarea id="message" name="user-message"></textarea>
+            <textarea id="message" name="user-message" rows="8"></textarea>
         </section>
         <section>
             <h2>How should we verify your account?</h2>
@@ -66,6 +66,7 @@
                     <input
                             id="verify-text-message"
                             name="verify"
+                            required
                             type="radio"
                             value="text-message"
                     />
@@ -97,7 +98,7 @@
         <hr/>
         <section>
             <div class="form-control-inline">
-                <input id="agree-terms" name="agree-terms" type="checkbox"/>
+                <input id="agree-terms" name="agree-terms" required type="checkbox"/>
                 <label for="agree-terms">Agree to terms?</label>
             </div>
         </section>
