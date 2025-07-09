@@ -12,62 +12,98 @@
     <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<form action="/" method="GET">
-    <label for="username">Your name</label>
-    <input id="username" name="user-name" type="text"/>
-
-    <label for="message">Your message</label>
-    <textarea id="message" name="user-message"></textarea>
-
-    <label for="useremail">Your email address</label>
-    <input id="useremail" name="user-email" type="email"/>
-    <label for="userage">Your age</label>
-    <input id="userage" name="user-age" step="1" type="number"/>
-    <label for="userpassword">Your password</label>
-    <input id="userpassword" name="user-password" type="password"/>
-    <label for="birthdate">Your birthdate</label>
-    <input id="birthdate" name="user-birthdate" type="date"/>
-    <label for="user-gender">Your gender</label>
-    <select id="user-gender" name="user-gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-    </select>
-    <hr/>
-    <h2>How should we verify your account?</h2>
-    <div class="form-control-inline">
-        <input
-                id="verify-text-message"
-                name="verify"
-                type="radio"
-                value="text-message"
-        />
-        <label for="verify-text-message">Via text message (SMS)</label>
-    </div>
-    <div class="form-control-inline">
-        <input id="verify-phone" name="verify" type="radio" value="phone"/>
-        <label for="verify-phone">Via a phone call</label>
-    </div>
-    <div class="form-control-inline">
-        <input id="verify-email" name="verify" type="radio" value="email"/>
-        <label for="verify-email">Via an email</label>
-    </div>
-    <hr>
-    <div class="form-control-inline">
-        <input id="agree-terms" name="agree-terms" type="checkbox"/>
-        <label for="agree-terms">Agree to terms?</label>
-    </div>
-    <hr>
-    <div class="form-control-inline">
-        <input id="contact-email" name="contact" type="checkbox" value="email"/>
-        <label for="contact-email">Contact me via email</label>
-    </div>
-    <div class="form-control-inline">
-        <input id="contact-phone" name="contact" type="checkbox" value="phone"/>
-        <label for="contact-phone">Contact me via phone</label>
-    </div>
-    <hr>
-    <button>Submit</button>
-</form>
+<header>
+    <h1>HTML Forms</h1>
+</header>
+<main>
+    <form action="/" method="GET">
+        <section>
+            <h2>Your personal details</h2>
+            <ul>
+                <li>
+                    <label for="username">Your name</label>
+                    <input id="username" name="user-name" type="text"/>
+                </li>
+                <li>
+                    <label for="useremail">Your email address</label>
+                    <input id="useremail" name="user-email" type="email"/>
+                </li>
+                <li>
+                    <label for="userpassword">Your password</label>
+                    <input id="userpassword" name="user-password" type="password"/>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>More details</h2>
+            <ul>
+                <li>
+                    <label for="userage">Your age</label>
+                    <input id="userage" name="user-age" step="1" type="number"/>
+                </li>
+                <li>
+                    <label for="birthdate">Your birthdate</label>
+                    <input id="birthdate" name="user-birthdate" type="date"/>
+                </li>
+                <li>
+                    <label for="user-gender">Your gender</label>
+                    <select id="user-gender" name="user-gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <label for="message">Your message</label>
+            <textarea id="message" name="user-message"></textarea>
+        </section>
+        <section>
+            <h2>How should we verify your account?</h2>
+            <ul>
+                <li class="form-control-inline">
+                    <input
+                            id="verify-text-message"
+                            name="verify"
+                            type="radio"
+                            value="text-message"
+                    />
+                    <label for="verify-text-message">Via text message (SMS)</label>
+                </li>
+                <li class="form-control-inline">
+                    <input id="verify-phone" name="verify" type="radio" value="phone"/>
+                    <label for="verify-phone">Via a phone call</label>
+                </li>
+                <li class="form-control-inline">
+                    <input id="verify-email" name="verify" type="radio" value="email"/>
+                    <label for="verify-email">Via an email</label>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>How should we contact you?</h2>
+            <ul>
+                <li class="form-control-inline">
+                    <input id="contact-email" name="contact" type="checkbox" value="email"/>
+                    <label for="contact-email">Contact me via email</label>
+                </li>
+                <li class="form-control-inline">
+                    <input id="contact-phone" name="contact" type="checkbox" value="phone"/>
+                    <label for="contact-phone">Contact me via phone</label>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div class="form-control-inline">
+                <input id="agree-terms" name="agree-terms" type="checkbox"/>
+                <label for="agree-terms">Agree to terms?</label>
+            </div>
+        </section>
+        <section>
+            <button>Submit</button>
+        </section>
+    </form>
+</main>
 </body>
 </html>
